@@ -11,25 +11,40 @@
 
 
 -->
+<div>
+    <p style="margin-top:20px;">Subject:</p> <input type="text" id="subjectText" value="QuickZenNote_" style="margin: 10px 20px;"></div>
+
+<div>
+    <p>
+        Content:</p>
+    <textarea id="ContentText" style="height: 200px; width:300px; margin: 10px 20px;"></textarea>
+</div>
+<br>
+<br>
+
+<a id="email" href="# ">e-mail data</a>
+<script type="text/javascript ">
+    document.getElementById("subjectText").style.height = "25px ";
+    document.getElementById("subjectText").style.width = "300px ";
+
+    var ct = document.querySelector("#ContentText");
+    ct.textContent = "#priority \n#tags ";
 
 
-<a id="email" href="#">e-mail data</a>
-<script type="text/javascript">
+
     var link = document.getElementById('email');
     link.onclick = function() {
-        this.href = "mailto:helpdesk@nursenextdoor.com?"
-        this.herf += "subject=" + setSubject('test subject');
-        this.href += "&body=" + setBody('test body');
+        this.href = "mailto:helpdesk@nursenextdoor.com";
+        //   this.herf += "ttttt ";
+        this.href += "?subject=" + setSubject(document.getElementById('subjectText').value) + " &body=" + setBody(ct.textContent);
     };
-
-
-
-    function setBody(bodyText) {
-        return bodyText;
-    }
 
     function setSubject(subjectText) {
 
         return subjectText;
+    }
+
+    function setBody(bodyText) {
+        return bodyText;
     }
 </script>
