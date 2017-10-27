@@ -17,11 +17,19 @@
 <script type="text/javascript">
     var link = document.getElementById('email');
     link.onclick = function() {
-        this.href = "mailto:you@yourdomain.com?subject=Data&body=";
-        this.href += getBody();
+        this.href = "mailto:helpdesk@nursenextdoor.com?"
+        this.herf += "subject=" + setSubject('test subject');
+        this.href += "&body=" + setBody('test body');
     };
 
-    function getBody() {
-        return 'HelloWorld';
+
+
+    function setBody(bodyText) {
+        return bodyText;
+    }
+
+    function setSubject(subjectText) {
+
+        return subjectText;
     }
 </script>
