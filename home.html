@@ -12,7 +12,7 @@
 
 -->
 <div>
-    <p style="margin-top:20px;">Subject:</p> <input type="text" id="subjectText" value="QuickZenNote_" style="margin: 10px 20px;"></div>
+    <p style="margin-top:20px;">Subject:</p> <input type="text" id="subjectText" value="QuickZenNote_[subject]" style="margin: 10px 20px;"></div>
 
 <div>
     <p>
@@ -28,7 +28,16 @@
     document.getElementById("subjectText").style.width = "300px ";
 
     var ct = document.querySelector("#ContentText");
-    ct.textContent = "#normal%0D%0A#tags testTag%0D%0A#task";
+    var newLineText = "%0D%0A"
+    ct.textContent = "#normal"+
+                        newLineText+
+                        "#tags [tag1,tag2]]"+
+                        newLineText+
+                        "#task"+
+                        newLineText+
+                        "#solved"+
+                        newLineText+
+                        [content];
 
 
 
