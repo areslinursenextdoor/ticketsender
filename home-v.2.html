@@ -1,0 +1,177 @@
+<html>
+<head>
+    <title>Fast Zendesk Email</title>
+    <style type="text/css">
+        #container {
+            width: 780px;
+            margin: 30px auto;
+            background-color: #CB007A;
+            text-align: center;
+            padding-top: 20px;
+            height: 830px;
+        }
+        #email {
+            margin: 20px auto;
+        }
+        #d{
+            float: right;
+        }
+        .square {
+            width: 45%;
+            background-color: #fcd96f;
+            margin: 2.5%;
+            float: left;
+        }
+        .vertical-radio-buttons div {
+            display: block;
+            padding: 0 0 5px 5px;
+            clear: both;
+        }
+        .vertical-radio-buttons span {
+            display: block;
+            padding-left: 20px;
+            cursor: inherit;
+        }
+        .vertical-radio-buttons label {
+            font-size: rem-calc(16);
+        }
+        .vertical-radio-buttons input {
+            float: left;
+            width: 20px;
+            margin-left: -20px;
+            margin-top: 6px; // vertically align radio button with text
+            padding: 0;
+            -webkit-appearance: radio;
+        }
+        #otherfield {
+            width: 30%;
+            float: right;
+            margin-top: 40px;
+            margin-right: 1.66%;
+            margin-left: 20%;
+        }
+
+        .input  {
+           display: none !important;
+           text-align: Center;
+        }
+
+        #submit {
+            margin: 30px auto;
+            text-align: center;
+        }
+       .title {
+            font-weight: bolder;
+            font-size: 2.2em;
+       }
+       .small {
+            font-size: 20px;
+       }
+
+       #container div h3 {
+        margin-top: 10px;
+        font-size: 45px;
+        margin-bottom: 0px;
+       }
+
+        #container div p {
+          font-size: 25px;
+        }
+        input[type="checkbox"]{
+          width: 20px; /*Desired width*/
+          height: 20px; /*Desired height*/
+        }
+
+    </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.0/css/foundation.min.css" />
+</head>
+
+
+
+<body>
+    <div id="container">
+        <h1>Zendesk Fast E-mail Sender </h1>
+        <div class="square">
+          <h3>Assignee</h2>
+          <p>Saei</p>
+          <p>Ares</p>
+          <p>Herbert</p>
+        </div>
+
+        <div class="square">
+         <h3>Team</h3>
+         <p>HQ</p>
+         <p>CSC</p>
+         <p>Intakes</p>
+         <p>Optout</p>
+         <p>FP</p>
+        </div>
+        <div class="square">
+          <h3>Team</h3>
+          <p>Support</p>
+          <p>Remote</p>
+          <p>Main</p>
+        </div>
+          <div class="square">
+          <h3>Topic</h3>
+          <p>Cisco</p>
+          <p>Procura</p>
+          <p>Franconnect</p>
+        </div>
+        <div>          
+          <input type="checkbox" id="otherbutton" name="Other" value="Other">
+           <label for="otherbutton"><span class="small">Other</span></label>
+        </div>    
+        
+        <input type="text" class="input" id="text" placeholder="printer" value="Other">
+    </div>
+        
+    <div id="submit">
+        <form>
+            <input type="submit">
+        </form>
+    </div>
+
+
+
+    <script type="text/javascript">
+      var btn = document.querySelector("#otherbutton");
+      btn.addEventListener("click",function(){
+      var txt = document.querySelector("#text");
+      txt.classList.toggle("input");
+    });
+     
+ 
+        //var ct = document.querySelector("#ContentText");
+        //var newLineText = "%0D%0A";
+        //ct.textContent = "#normal"+ newLineText+ "#tags [tag1,tag2]"+ newLineText + "#task"+ newLineText+"#solved"+ newLineText+ "[content]";
+        //var link = document.getElementById('email');
+        //link.onclick = function() {
+         //   this.href = "mailto:helpdesk@nursenextdoor.com";
+          //  this.href += "?subject=" + setSubject(document.getElementById('subjectText').value) + " &body=" + setBody(ct.textContent);
+        //};
+
+        //function setSubject(subjectText) {
+
+          //  return subjectText;
+        //}
+
+        //function setBody(bodyText) {
+          //  return bodyText;
+        //}
+    </script>
+</body>
+</html>
+<!--
+<a href="mailto:helpdesk@nursenextdoor.com?subject=Greetings%20from%20Cupertino!&body=Wish%20you%20were%20here!">
+    <font size=10 id="btn">Click</font>
+</a> 
+
+
+
+
+
+
+
+-->
